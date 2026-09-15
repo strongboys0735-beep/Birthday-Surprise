@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Video Kenangan ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, #432344 0%, #1b101d 45%, #08080c 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 35px;
+            animation: muncul 2s ease-in-out;
+        }
+
+        .video-box {
+            margin-bottom: 55px;
+            animation: videoMuncul 2s ease-in-out;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            border-radius: 25px;
+            box-shadow: 0 15px 45px rgba(255,255,255,0.18);
+            background: black;
+        }
+
+        .caption {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #dddddd;
+            max-width: 600px;
+            margin: 20px auto 0;
+        }
+
+        .video2-title {
+            margin: 65px 0 30px;
+            font-size: 30px;
+            animation: muncul 2s ease-in-out;
+        }
+
+        .heart {
+            font-size: 32px;
+            margin-bottom: 15px;
+            animation: heartbeat 1.3s infinite;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #17101c;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.35);
+        }
+
+        .bintang {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bintang span {
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            animation: kedip 3s infinite;
+        }
+
+        .bintang span:nth-child(1) {
+            top: 10%;
+            left: 8%;
+        }
+
+        .bintang span:nth-child(2) {
+            top: 25%;
+            left: 90%;
+            animation-delay: 1s;
+        }
+
+        .bintang span:nth-child(3) {
+            top: 60%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+
+        .bintang span:nth-child(4) {
+            top: 80%;
+            left: 88%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes videoMuncul {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes kedip {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bintang">
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+    </div>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Satu Video Untuk Kamu</h1>
+
+        <div class="video-box">
+
+            <video controls>
+                <source src="video/video1.mp4" type="video/mp4">
+                Browser kamu tidak mendukung video.
+            </video>
+
+            <p class="caption">
+                Ada banyak hal yang mungkin tidak bisa
+                diungkapkan lewat kata-kata,
+                tapi semoga video ini bisa menyampaikannya. ❤️
+            </p>
+
+        </div>
+
+        <h2 class="video2-title">
+            Dan masih ada satu lagi... ❤️
+        </h2>
+
+        <div class="video-box">
+
+            <video controls>
+                <source src="video/video2.mp4" type="video/mp4">
+                Browser kamu tidak mendukung video.
+            </video>
+
+            <p class="caption">
+                Karena satu video saja rasanya belum cukup
+                untuk menggambarkan semua momen yang berarti. ❤️
+            </p>
+
+        </div>
+
+        <a href="akhir.html">
+            <button>
+                Lanjut ke Pesan Terakhir ❤️
+            </button>
+        </a>
+
+    </div>
+
+</body>
+</html>

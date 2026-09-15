@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Kenangan Kita ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, #432344 0%, #1b101d 45%, #08080c 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            animation: muncul 2s ease-in-out;
+        }
+
+        .subtitle {
+            color: #cccccc;
+            font-size: 18px;
+            margin-bottom: 40px;
+            animation: muncul 3s ease-in-out;
+        }
+
+        .foto {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .kenangan {
+            margin-bottom: 55px;
+            animation: fotoMuncul 2s ease-in-out;
+        }
+
+        .kenangan img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(255,255,255,0.18);
+            transition: 0.4s;
+        }
+
+        .kenangan img:hover {
+            transform: scale(1.03);
+        }
+
+        .kenangan p {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #dddddd;
+            margin: 20px auto 0;
+            max-width: 550px;
+        }
+
+        .heart {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #17101c;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.35);
+        }
+
+        .bintang {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bintang span {
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            animation: kedip 3s infinite;
+        }
+
+        .bintang span:nth-child(1) {
+            top: 12%;
+            left: 8%;
+        }
+
+        .bintang span:nth-child(2) {
+            top: 25%;
+            left: 90%;
+            animation-delay: 1s;
+        }
+
+        .bintang span:nth-child(3) {
+            top: 65%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+
+        .bintang span:nth-child(4) {
+            top: 80%;
+            left: 88%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fotoMuncul {
+            from {
+                opacity: 0;
+                transform: scale(0.85) translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes kedip {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bintang">
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+    </div>
+
+    <h1>Kenangan Kita ❤️</h1>
+
+    <p class="subtitle">
+        Beberapa momen yang selalu ingin aku ingat...
+    </p>
+
+    <div class="foto">
+
+        <div class="kenangan">
+            <div class="heart">❤️</div>
+
+            <img src="foto/foto1.jpg" alt="Kenangan kita">
+
+            <p>
+                Setiap momen bersamamu selalu punya cerita.
+                Dan setiap cerita itu punya tempat tersendiri di hati. ❤️
+            </p>
+        </div>
+
+        <div class="kenangan">
+            <div class="heart">💕</div>
+
+            <img src="foto/foto2.jpg" alt="Kenangan kita">
+
+            <p>
+                Semoga ini bukan hanya menjadi kenangan,
+                tapi awal dari banyak cerita indah lainnya. ❤️
+            </p>
+        </div>
+
+        <a href="video.html">
+            <button>
+                Lihat Video ❤️
+            </button>
+        </a>
+
+    </div>
+
+</body>
+</html>

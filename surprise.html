@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untuk Kamu ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top, #432344 0%, #1b101d 45%, #08080c 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+            margin: auto;
+            padding: 50px 25px;
+        }
+
+        .heart {
+            font-size: 65px;
+            animation: heartbeat 1.3s infinite;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.35));
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 20px 0;
+            animation: muncul 2s ease-in-out;
+        }
+
+        p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #dddddd;
+            animation: muncul 3s ease-in-out;
+        }
+
+        img {
+            width: 300px;
+            max-width: 90%;
+            border-radius: 25px;
+            margin-top: 25px;
+            box-shadow: 0 10px 40px rgba(255,255,255,0.18);
+            animation: fotoMuncul 2s ease-in-out;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 28px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #17101c;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 30px rgba(255,255,255,0.35);
+        }
+
+        .musik {
+            margin-top: 30px;
+        }
+
+        .bintang {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bintang span {
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            animation: kedip 3s infinite;
+        }
+
+        .bintang span:nth-child(1) {
+            top: 10%;
+            left: 10%;
+        }
+
+        .bintang span:nth-child(2) {
+            top: 20%;
+            left: 85%;
+            animation-delay: 1s;
+        }
+
+        .bintang span:nth-child(3) {
+            top: 60%;
+            left: 8%;
+            animation-delay: 2s;
+        }
+
+        .bintang span:nth-child(4) {
+            top: 75%;
+            left: 90%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fotoMuncul {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes kedip {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bintang">
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+    </div>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Ada sesuatu untuk kamu...</h1>
+
+        <p>
+            Hari ini adalah hari yang spesial,
+            karena seseorang yang sangat berarti
+            sedang bertambah usia.
+        </p>
+
+        <p>
+            Terima kasih sudah menjadi bagian
+            dari cerita yang indah. ❤️
+        </p>
+
+        <img src="foto/foto1.jpg" alt="Foto kenangan">
+
+        <h2>Untuk kamu ❤️</h2>
+
+        <p>
+            Terima kasih sudah hadir dan menjadi bagian
+            dari cerita hidupku.
+            Semoga di hari ulang tahunmu ini,
+            semua hal baik datang kepadamu.
+        </p>
+
+        <div class="musik">
+
+            <audio id="musik" loop>
+                <source src="musik/lagu.mp3" type="audio/mpeg">
+            </audio>
+
+            <button onclick="mulaiMusik()">
+                Putar Musik ❤️🎵
+            </button>
+
+        </div>
+
+        <br>
+
+        <a href="foto.html">
+            <button>Lanjut ❤️</button>
+        </a>
+
+    </div>
+
+    <script>
+        function mulaiMusik() {
+            document.getElementById("musik").play();
+        }
+    </script>
+
+</body>
+</html>

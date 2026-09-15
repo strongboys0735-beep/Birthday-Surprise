@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Surprise ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(circle at top, #3b1d3f 0%, #17101c 45%, #08080c 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 30px;
+            animation: muncul 2s ease-in-out;
+        }
+
+        .heart {
+            font-size: 75px;
+            animation: heartbeat 1.3s infinite;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 20px 0 15px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #dddddd;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #17101c;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 5px 25px rgba(255,255,255,0.2);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 35px rgba(255,255,255,0.4);
+        }
+
+        .stars span {
+            position: absolute;
+            color: white;
+            font-size: 15px;
+            animation: berkedip 3s infinite ease-in-out;
+        }
+
+        .stars span:nth-child(1) {
+            top: 15%;
+            left: 15%;
+        }
+
+        .stars span:nth-child(2) {
+            top: 25%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .stars span:nth-child(3) {
+            top: 70%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .stars span:nth-child(4) {
+            top: 75%;
+            left: 85%;
+            animation-delay: 1.5s;
+        }
+
+        .stars span:nth-child(5) {
+            top: 40%;
+            left: 90%;
+            animation-delay: 0.5s;
+        }
+
+        .stars span:nth-child(6) {
+            top: 85%;
+            left: 50%;
+            animation-delay: 2.5s;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes berkedip {
+            0%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stars">
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+        <span>✦</span>
+        <span>✧</span>
+    </div>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Happy Birthday</h1>
+
+        <p>
+            Untuk seseorang yang sangat spesial... ❤️
+        </p>
+
+        <button onclick="bukaKejutan()">
+            Buka Kejutan ❤️
+        </button>
+
+    </div>
+
+    <script>
+        function bukaKejutan() {
+            window.location.href = "surprise.html";
+        }
+    </script>
+
+</body>
+</html>

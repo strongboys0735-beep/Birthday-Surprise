@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(circle at center, #512852 0%, #211321 45%, #08080c 100%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            z-index: 5;
+            max-width: 700px;
+            padding: 30px;
+            animation: muncul 3s ease-in-out;
+        }
+
+        .heart {
+            font-size: 80px;
+            animation: heartbeat 1.3s infinite;
+            filter: drop-shadow(0 0 25px rgba(255,255,255,0.45));
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .pesan {
+            font-size: 20px;
+            line-height: 1.9;
+            color: #eeeeee;
+            margin: 15px 0;
+        }
+
+        .special {
+            margin-top: 35px;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.7;
+        }
+
+        .small {
+            margin-top: 30px;
+            font-size: 17px;
+            color: #bbbbbb;
+        }
+
+        .hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .hearts span {
+            position: absolute;
+            bottom: -60px;
+            font-size: 25px;
+            animation: naik 9s linear infinite;
+        }
+
+        .hearts span:nth-child(1) {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .hearts span:nth-child(2) {
+            left: 20%;
+            animation-delay: 3s;
+        }
+
+        .hearts span:nth-child(3) {
+            left: 40%;
+            animation-delay: 1s;
+        }
+
+        .hearts span:nth-child(4) {
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        .hearts span:nth-child(5) {
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .hearts span:nth-child(6) {
+            left: 95%;
+            animation-delay: 5s;
+        }
+
+        .cahaya {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            filter: blur(50px);
+            animation: cahayaGerak 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes naik {
+            from {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-115vh) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes cahayaGerak {
+            from {
+                transform: translate(-150px, -100px);
+            }
+
+            to {
+                transform: translate(150px, 100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cahaya"></div>
+
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💓</span>
+    </div>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Happy Birthday ❤️</h1>
+
+        <p class="pesan">
+            Selamat ulang tahun untuk kamu,
+            seseorang yang begitu berarti.
+        </p>
+
+        <p class="pesan">
+            Semoga hari-harimu selalu dipenuhi
+            kebahagiaan, kesehatan, dan hal-hal baik.
+        </p>
+
+        <p class="special">
+            Terima kasih sudah hadir<br>
+            dan menjadi bagian dari ceritaku. ❤️
+        </p>
+
+        <p class="small">
+            Semoga kita bisa terus menciptakan
+            banyak cerita indah bersama.
+        </p>
+
+        <p class="small">
+            ❤️ Untuk kamu, dengan penuh kasih. ❤️
+        </p>
+
+    </div>
+
+</body>
+</html>
